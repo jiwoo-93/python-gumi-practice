@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 query = "안세영"
 search_url = "https://search.imbc.com/news?qt={query}"
 
+download_folder = f"./{query}"
+
 response = requests.get(search_url)
 soup = BeautifulSoup(response.text,"html.parser")
 
